@@ -1,0 +1,11 @@
+*__pycache__*
+*.pyc
+*.txt
+.vscode/*
+
+# tmp dir
+.data
+.exp_result
+
+# white list
+!plots/example.ipynb
