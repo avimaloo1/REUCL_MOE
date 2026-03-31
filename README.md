@@ -63,81 +63,79 @@ This project explores Mixture-of-Experts (MoE) models for continual learning, fo
 
 In traditional neural networks, learning new tasks often leads to catastrophic forgetting, where performance on earlier tasks degrades. This project addresses that problem using a Mixture-of-Experts (MoE) approach:
 
-Multiple expert networks are trained
+* Multiple expert networks are trained
 
-A gating mechanism decides which expert(s) to use for each input
+* A gating mechanism decides which expert(s) to use for each input
 
-Knowledge is distributed across experts instead of being overwritten
+* Knowledge is distributed across experts instead of being overwritten
 
 Continual Learning Setting
 
-The project simulates a continual (incremental) learning scenario, where:
+* The project simulates a continual (incremental) learning scenario, where:
 
-Data arrives in sequential tasks
+* Data arrives in sequential tasks
 
-The model must learn each task in order
+* The model must learn each task in order
 
-Past data is limited or unavailable
+* Past data is limited or unavailable
 
-Performance is evaluated on all previously seen tasks
+* Performance is evaluated on all previously seen tasks
 
 ## Key Components
-Model (resnet18_ocm.py)
-  A ResNet-18–based architecture adapted for continual learning
+* Model (resnet18_ocm.py) - A ResNet-18–based architecture adapted for continual learning
   
-Supports expert-style modularization
+* Supports expert-style modularization
 
-Training Pipeline (pipe_plain.py)
+* Training Pipeline (pipe_plain.py)
 
-Main entry point for running experiments
+* Main entry point for running experiments
 
-Handles task sequencing, training, and evaluation
+* Handles task sequencing, training, and evaluation
 
-Continual Learning Utilities (utils_cl/)
+* Continual Learning Utilities (utils_cl/)
 
-Training loops tailored for sequential tasks
+* Training loops tailored for sequential tasks
 
 Metrics for:
-Accuracy
+* Accuracy
 
-Forgetting
+* Forgetting
 
-Task performance over time
+* Task performance over time
 
 Experiment Configuration (config/)
-YAML-based configs for reproducible experiments
+* YAML-based configs for reproducible experiments
 
-Controls datasets, model settings, and training parameters
+* Controls datasets, model settings, and training parameters
 
 Synthetic Experiments (r1_syn/)
 
-Simulated setups to analyze:
-Forgetting behavior
-
-MoE vs standard neural networks
+* Simulated setups to analyze:
+* Forgetting behavior
+* MoE vs standard neural networks
 
 ## Visualization (plots/)
 Tools for analyzing results
 
-Jupyter notebook for generating figures
+* Jupyter notebook for generating figures
 
 ## What You Can Do With It
-Run continual learning experiments on CIFAR-100
+* Run continual learning experiments on CIFAR-100
 
-Compare MoE vs standard neural networks
+* Compare MoE vs standard neural networks
 
-Measure catastrophic forgetting
+* Measure catastrophic forgetting
 
-Visualize how knowledge evolves across tasks
+* Visualize how knowledge evolves across tasks
 
-Reproduce figures from research experiments
+* Reproduce figures from research experiments
 
 ## Goal
 
 The main goal is to demonstrate that Mixture-of-Experts architectures can improve knowledge retention in continual learning by:
 
-Isolating task-specific knowledge
+* Isolating task-specific knowledge
 
-Reducing interference between tasks
+* Reducing interference between tasks
 
-Enabling scalable, modular learning systems
+* Enabling scalable, modular learning systems
